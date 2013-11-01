@@ -1,0 +1,15 @@
+<dataset>
+    <problems id="44"
+              url="http://www.zombierunner.com/"
+              url_hash="c8856d220c80cd868655bb860002fe10860cf8e5"
+              operator_type="test_website_validity"
+              state="FINISHED"
+              finished_at="2013-08-23 23:00:00"
+              solution="{&quot;isValid&quot;:true}"/>
+    <problems id="45"
+              url="http://thisUnsolvedProblemUrlShouldBeInProblems.xml/"
+              url_hash="51d8f87e46ddc5a10d1c99903ca882524aa6fcf0"
+              operator_type="test_website_validity"
+              state="PROCESSING"
+              solution=""/>
+</dataset>

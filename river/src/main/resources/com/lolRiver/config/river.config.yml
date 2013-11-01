@@ -1,0 +1,730 @@
+all:
+  download:
+    skins_file: com/lolRiver/river/util/skins.yml
+
+  riot:
+    client_version: 3.12.13_10_03_21_10
+    bots_file: com/lolRiver/achimala/leaguelib/tests/bots.yml
+
+  kassadin:
+    header_api_key_name: X-Mashape-Authorization
+    header_api_key_value: YGtB5YwuPfzyswUKfEkRw8qE9fcduFmu
+    recent_games_from_region_username_url: https://teemojson.p.mashape.com/player/%s/%s/recent_games
+    elo_from_region_username_url: https://teemojson.p.mashape.com/player/%s/%s/leagues
+    summoner_id_from_region_username_url: https://teemojson.p.mashape.com/player/%s/%s
+
+  twitch:
+    recent_videos_from_streamer_name_url: https://api.twitch.tv/kraken/channels/%s/videos?broadcasts=true
+
+  raw_data_worker_submitter:
+    maximum_pool_size: 30
+    loop_interval: 60000
+
+  background_worker_submitter:
+    maximum_pool_size: 30
+    loop_interval: 500
+
+  mysql:
+    username: river
+    password: river
+    db: river
+    host: localhost
+
+  # 2 means can play role, 1 means maybe, 0 means can't,
+  champion:
+    AATROX:
+      top: 2
+      mid: 1
+      jung: 2
+      supp: 0
+      adc: 0
+    AHRI:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    AKALI:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    ALISTAR:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    AMUMU:
+      top: 0
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    ANIVIA:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    ANNIE:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 2
+      adc: 0
+    ASHE:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    BLITZCRANK:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    BRAND:
+      top: 0
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    CAITLYN:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    CASSIOPEIA:
+      top: 0
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    CHOGATH:
+      top: 2
+      mid: 2
+      jung: 2
+      supp: 0
+      adc: 0
+    CORKI:
+      top: 0
+      mid: 1
+      jung: 0
+      supp: 0
+      adc: 2
+    DARIUS:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    DIANA:
+      top: 1
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    DRMUNDO:
+      top: 2
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    DRAVEN:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    ELISE:
+      top: 2
+      mid: 0
+      jung: 2
+      supp: 1
+      adc: 0
+    EVELYNN:
+      top: 1
+      mid: 1
+      jung: 2
+      supp: 0
+      adc: 0
+    EZREAL:
+      top: 0
+      mid: 1
+      jung: 0
+      supp: 0
+      adc: 2
+    FIDDLESTICKS:
+      top: 0
+      mid: 2
+      jung: 2
+      supp: 2
+      adc: 0
+    FIORA:
+      top: 2
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 0
+    FIZZ:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    GALIO:
+      top: 2
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    GANGPLANK:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    GAREN:
+      top: 2
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 0
+    GRAGAS:
+      top: 0
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    GRAVES:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    HECARIM:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    HEIMERDINGER:
+      top: 0
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    IRELIA:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    JANNA:
+      top: 0
+      mid: 1
+      jung: 0
+      supp: 2
+      adc: 1
+    JARVANIV:
+      top: 2
+      mid: 1
+      jung: 2
+      supp: 0
+      adc: 0
+    JAX:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    JAYCE:
+      top: 2
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 1
+    JINX:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    KARMA:
+      top: 1
+      mid: 2
+      jung: 1
+      supp: 2
+      adc: 0
+    KARTHUS:
+      top: 1
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    KASSADIN:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    KATARINA:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    KAYLE:
+      top: 2
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    KENNEN:
+      top: 2
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 1
+    KHAZIX:
+      top: 2
+      mid: 2
+      jung: 2
+      supp: 0
+      adc: 0
+    KOGMAW:
+      top: 0
+      mid: 1
+      jung: 0
+      supp: 0
+      adc: 2
+    LEBLANC:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    LEESIN:
+      top: 2
+      mid: 2
+      jung: 2
+      supp: 0
+      adc: 0
+    LEONA:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    LISSANDRA:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    LUCIAN:
+      top: 0
+      mid: 1
+      jung: 0
+      supp: 0
+      adc: 2
+    LULU:
+      top: 0
+      mid: 1
+      jung: 0
+      supp: 2
+      adc: 0
+    LUX:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 1
+      adc: 0
+    MALPHITE:
+      top: 2
+      mid: 1
+      jung: 2
+      supp: 0
+      adc: 0
+    MALZAHAR:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    MAOKAI:
+      top: 1
+      mid: 1
+      jung: 2
+      supp: 1
+      adc: 0
+    MASTERYI:
+      top: 1
+      mid: 2
+      jung: 2
+      supp: 0
+      adc: 0
+    MISSFORTUNE:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    MORDEKAISER:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    MORGANA:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 1
+      adc: 0
+    NAMI:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    NASUS:
+      top: 2
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    NAUTILUS:
+      top: 0
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    NIDALEE:
+      top: 2
+      mid: 2
+      jung: 0
+      supp: 1
+      adc: 0
+    NOCTURNE:
+      top: 0
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    NUNU:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 2
+      adc: 0
+    OLAF:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    ORIANNA:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    PANTHEON:
+      top: 2
+      mid: 2
+      jung: 2
+      supp: 0
+      adc: 0
+    POPPY:
+      top: 2
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 0
+    QUINN:
+      top: 1
+      mid: 1
+      jung: 0
+      supp: 0
+      adc: 2
+    RAMMUS:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    RENEKTON:
+      top: 2
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 0
+    RENGAR:
+      top: 2
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    RIVEN:
+      top: 2
+      mid: 2
+      jung: 2
+      supp: 0
+      adc: 0
+    RUMBLE:
+      top: 2
+      mid: 1
+      jung: 0
+      supp: 0
+      adc: 0
+    RYZE:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    SEJUANI:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    SHACO:
+      top: 0
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    SHEN:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 2
+      adc: 0
+    SHYVANA:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    SINGED:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    SION:
+      top: 2
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    SIVIR:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    SKARNER:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    SONA:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    SORAKA:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    SWAIN:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    SYNDRA:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    TALON:
+      top: 1
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    TARIC:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    TEEMO:
+      top: 2
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 0
+    THRESH:
+      top: 1
+      mid: 0
+      jung: 0
+      supp: 2
+      adc: 0
+    TRISTANA:
+      top: 0
+      mid: 1
+      jung: 0
+      supp: 0
+      adc: 2
+    TRUNDLE:
+      top: 2
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    TRYNDAMERE:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    TWISTEDFATE:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    TWITCH:
+      top: 1
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    UDYR:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    URGOT:
+      top: 1
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    VARUS:
+      top: 0
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    VAYNE:
+      top: 1
+      mid: 0
+      jung: 0
+      supp: 0
+      adc: 2
+    VEIGAR:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 1
+      adc: 0
+    VI:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    VIKTOR:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    VLADMIR:
+      top: 2
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    VOLIBEAR:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    WARWICK:
+      top: 1
+      mid: 1
+      jung: 2
+      supp: 0
+      adc: 0
+    WUKONG:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    XERATH:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    XINZHAO:
+      top: 1
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    YORICK:
+      top: 2
+      mid: 0
+      jung: 1
+      supp: 0
+      adc: 0
+    ZAC:
+      top: 2
+      mid: 0
+      jung: 2
+      supp: 0
+      adc: 0
+    ZED:
+      top: 1
+      mid: 2
+      jung: 1
+      supp: 0
+      adc: 0
+    ZIGGS:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 0
+      adc: 0
+    ZILEAN:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 2
+      adc: 0
+    ZYRA:
+      top: 0
+      mid: 2
+      jung: 0
+      supp: 2
+      adc: 0

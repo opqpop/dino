@@ -1,0 +1,16 @@
+<dataset>
+    <problems id="44" name="ZombieRunner" address="429 S California Ave Palo Alto, CA 94306" locality="zombierunner"
+              phone="650-325-2048" region="California" postal_code="94306" url="http://www.zombierunner.com/"
+              url_hash="c8856d220c80cd868655bb860002fe10860cf8e5"
+              operator_type="check_feature_quality"
+              state="FINISHED"
+              finished_at="2013-08-23 23:00:00"
+              solution="{&quot;phone&quot;:1.0, &quot;address&quot;:0.3235294117647059, &quot;postal_code&quot;:1.0, &quot;name&quot;:1.0, &quot;domain_name_similarity&quot;:1.0, &quot;locality&quot;:1.0}"/>
+    <problems id="45" name="This problem should be in problems.xml but unsolved"
+              address="429 S California Ave Palo Alto, CA 94306" locality="zombierunner"
+              phone="650-325-2048" region="California" postal_code="94306" url="http://www.zombierunner.com/"
+              url_hash="c8856d220c80cd868655bb860002fe10860cf8e5"
+              operator_type="check_feature_quality"
+              state="PROCESSING"
+              solution=""/>
+</dataset>

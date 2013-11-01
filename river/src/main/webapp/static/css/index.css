@@ -1,0 +1,373 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url(/static/images/background.jpg) no-repeat fixed;
+    min-width: 1600px;
+    min-width: 1600px;
+}
+
+form {
+    display: inline;
+}
+
+img.logo {
+    float: left;
+    border-radius: 25px;
+    margin-left: 62px;
+    margin-right: 54px;
+    margin-top: 52px;
+    display: block;
+}
+
+img.randomSkin {
+    width: 121px;
+    height: 220px;
+}
+
+img.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+input.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+input.avatarSelf {
+    width: 75px;
+    height: 75px;
+    border: 4px solid red;
+}
+
+input.avatarEnemy {
+    width: 50px;
+    height: 50px;
+}
+
+input.sortButtonDisabled {
+    opacity: 0.3;
+    width: 25px;
+    height: 15px;
+}
+
+input.sortButtonEnabled {
+    opacity: 1;
+    width: 25px;
+    height: 15px;
+}
+
+img.vs {
+    width: 40px;
+    height: 40px;
+}
+
+input.badgeChallenger {
+    width: 80px;
+    height: 60px;
+}
+
+img.badgeDiamond {
+    width: 85px;
+    height: 70px;
+}
+
+img.watchButton {
+    width: 120px;
+    height: 40px;
+}
+
+/* Checkboxes - http://csscheckbox.com/
+
+/*general styles for all CSS Checkboxes*/
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 20px;
+    height: 15px;
+    display: inline-block;
+    line-height: 15px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -15px;
+}
+
+.web-two-style {
+    background-image: url(/static/images/ui/checkboxes/checkbox_search.png);
+}
+
+input[type=checkbox].css-checkbox.med + label.css-label.med {
+    padding-left: 22px;
+    height: 17px;
+    display: inline-block;
+    line-height: 17px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox.med:checked + label.css-label.med {
+    background-position: 0 -17px;
+}
+
+input[type=checkbox].css-checkbox.sme + label.css-label.sme {
+    padding-left: 22px;
+    height: 16px;
+    display: inline-block;
+    line-height: 16px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox.sme:checked + label.css-label.sme {
+    background-position: 0 -16px;
+}
+
+input[type=checkbox].css-checkbox.lrg + label.css-label.lrg {
+    padding-left: 22px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 17px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox.lrg:checked + label.css-label.lrg {
+    background-position: 0 -20px;
+}
+
+/* END checkbox */
+
+input {
+    text-transform: capitalize;
+}
+
+input.searchButton {
+    padding-top: 0px;
+    vertical-align: text-top;
+    width: 85px;
+    height: 85px;
+}
+
+input.backButton {
+    vertical-align: text-top;
+    left: 0px;
+    top: -10px;
+    width: 75px;
+    height: 75px;
+    border-radius: 7px;
+}
+
+input.clipLength {
+    width: 45px;
+}
+
+/* End - http://stackoverflow.com/questions/306252/how-to-align-checkboxes-and-their-labels-consistently-cross-browsers */
+
+/* Start - Search Bar */
+
+table.search {
+    margin-top: 25px;
+    border: 8px groove brown;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: gray;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+td.randomSkin {
+    background-color: black;
+    margin-top: 50px;
+}
+
+td.search {
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-left: 10px;
+    border: none;
+    text-align: left;
+    vertical-align: text-top;
+}
+
+td.searchBox {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: none;
+    text-align: left;
+}
+
+td.searchRole {
+    white-space: nowrap;
+    border: none;
+    text-align: left;
+    vertical-align: text-top;
+    padding-left: 20px;
+}
+
+td.searchTier {
+    white-space: nowrap;
+    border: none;
+    text-align: left;
+    vertical-align: text-top;
+}
+
+td.checkBox {
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* End - Search Bar */
+
+table.clips {
+    border: 4px solid black;
+    margin-left: 35px;
+    min-width: 1400px;
+    max-width: 1400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+tr.clips:not(:first-child):hover {
+    background-color: lightgreen;
+}
+
+tr.clips:nth-child(1) {
+    background-color: #A8A8A8;
+}
+
+tr.clips:nth-child(2n + 3) {
+    background-color: antiquewhite;
+}
+
+tr.clips:nth-child(even) {
+    background-color: lightblue;
+}
+
+th {
+    background-color: yellow;
+    color: saddlebrown;
+    font-size: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-right: 2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+th.paginationHeader {
+    background-color: gray;
+}
+
+td {
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: capitalize;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+/* Date */
+td.clips:nth-child(1) {
+    width: 10%;
+}
+
+/* Streamer */
+td.clips:nth-child(2) {
+    width: 10%;
+}
+
+/* Role */
+td.clips:nth-child(3) {
+    width: 10%;
+}
+
+/* Matchup, split into 2 cols */
+td.clips:nth-child(4) {
+    width: 20%;
+}
+
+td.clips:nth-child(5) {
+    width: 20%;
+}
+
+/* Tier */
+td.clips:nth-child(6) {
+    width: 11%;
+}
+
+/* Length */
+td.clips:nth-child(7) {
+    width: 15%;
+}
+
+/* Views */
+td.clips:nth-child(8) {
+    width: 10%;
+}
+
+/* Rating & Watch Now */
+td.clips:nth-child(9) {
+    width: 10%;
+}
+
+a.page:link {
+    color: #ff0000;
+}
+
+a.page:visited {
+    color: #0000ff;
+}
+
+a.page:hover {
+    color: green;
+}
