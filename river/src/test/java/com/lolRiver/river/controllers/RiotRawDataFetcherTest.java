@@ -33,7 +33,7 @@ public class RiotRawDataFetcherTest {
         // TODO xia replace this with real tests
     }
 
-    @Test
+    //@Test
     public void testFetchRawData() throws Exception {
         List<LolUser> lolUsers = new ArrayList<LolUser>();
         lolUsers.add(new LolUser("phil's friend", "Yellowpanda", "na").setId(19863422));
@@ -42,7 +42,7 @@ public class RiotRawDataFetcherTest {
         fetcher.fetchAndStoreRawData(lolUsers);
     }
 
-    @Test
+    //@Test
     public void testFetchRawDataFromUserDb() throws Exception {
         fetcher.fetchAndStoreRawData(lolUserDao.getLolUsers());
     }

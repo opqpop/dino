@@ -76,58 +76,6 @@
         </resources>
 
         <plugins>
-            <!-- make jetty work with aws beanstalk http://www.eclipse.org/jetty/documentation/current/elastic-beanstalk.html#elastic-beanstalk-overview -->
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>unpack-test-webapp</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.lolRiver</groupId>
-                                    <artifactId>river</artifactId>
-                                    <version>0.0.4-SNAPSHOT</version>
-                                    <type>war</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>${test-assembly-dir}/</outputDirectory>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.eclipse.jetty.beanstalk</groupId>
-                                    <artifactId>jetty-beanstalk-overlay</artifactId>
-                                    <version>${project.version}</version>
-                                    <type>zip</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>${test-assembly-dir}/</outputDirectory>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <appendAssemblyId>false</appendAssemblyId>
-                    <tarLongFileMode>gnu</tarLongFileMode>
-                    <descriptors>
-                        <descriptor>src/assemble/beanstalk-testapp.xml</descriptor>
-                    </descriptors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
             <!-- Populates the ${buildNumber} variable with the most recent git commit tag (or sha if no tag exists) -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -146,47 +94,6 @@
                     <doCheck>false</doCheck>
                     <doUpdate>false</doUpdate>
                 </configuration>
-            </plugin>
-
-            <!-- This plugin runs custom scripts during various parts of the build lifecycle  -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-
-                    <!-- This execution & the bash script below saves the current  -->
-                    <!-- git commit ID into a REVISION file during the compile phase -->
-                    <execution>
-                        <id>store-git-revision</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>script/store-git-revision.sh</executable>
-                        </configuration>
-                    </execution>
-
-                    <!-- This execution enables calling uber_deploy when 'mvn deploy' is run. -->
-                    <execution>
-                        <id>run-uber-deploy</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>cap</executable>
-                            <arguments>
-                                <argument>${skeletor.uber_deploy_hosts}</argument>
-                                <argument>deploy:app_servers</argument>
-                                <argument>
-                                    WARPATH=${project.build.directory}/${project.build.finalName}.${project.packaging}
-                                </argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
             <!-- This plugin definition disables 'mvn deploy' from deploying to Nexus.  See exec-maven-plugin section. -->

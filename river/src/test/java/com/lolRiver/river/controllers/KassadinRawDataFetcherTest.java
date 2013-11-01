@@ -29,7 +29,7 @@ public class KassadinRawDataFetcherTest {
         // TODO xia replace this with real tests
     }
 
-    @Test
+    //@Test
     public void testFetchRawData() throws Exception {
         List<LolUser> lolUsers = new ArrayList<LolUser>();
         lolUsers.add(new LolUser("markdonkey", "mark donkey", "na"));

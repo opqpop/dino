@@ -29,7 +29,7 @@ public class TwitchVideoFetcherTest {
         // TODO xia replace this with real tests
     }
 
-    @Test
+    //@Test
     public void testFetchVideos() throws Exception {
         List<Streamer> streamers = new ArrayList<Streamer>();
         streamers.add(new Streamer("zekent"));

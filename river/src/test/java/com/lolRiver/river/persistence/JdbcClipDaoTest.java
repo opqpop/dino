@@ -4,6 +4,7 @@ import com.lolRiver.river.bootstrap.TestAppConfiguration;
 import com.lolRiver.river.models.Clip;
 import com.lolRiver.river.persistence.interfaces.ClipDao;
 import org.junit.runner.RunWith;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -21,6 +22,11 @@ import java.util.List;
 public class JdbcClipDaoTest {
     @Autowired
     ClipDao clipDao;
+
+    @Test
+    public void dummyTest() {
+        // TODO xia replace this with real tests
+    }
 
     //@Test
     public void testGetClips() {
